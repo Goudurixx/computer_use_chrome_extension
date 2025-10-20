@@ -1,0 +1,12 @@
+{
+  "name": "Chrome Extension Claude Computer Use",
+  "version": "1.0",
+  "scripts": {
+    "build": "rollup sidepanel/index.js --file dist/sidepanel.bundle.js --format iife",
+    "clean": "rm -rf dist && mkdir -p dist"
+  },
+  "private": true,
+  "devDependencies": {
+    "rollup": "4.22.4"
+  }
+}
