@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+  <body>
+    <h1>Computer Use Agent</h1>
+    <p>This extension connects to a local WebSocket server to pilot the browser.</p>
+    
+    <div class="status-section">
+      <h3>Connection Status</h3>
+      <div id="connection-status" class="status-indicator">Disconnected</div>
+    </div>
+
+    <div class="task-section">
+      <h3>Test Task</h3>
+      <textarea
+        id="task-input"
+        placeholder='Enter a task like "Find the latest paper on Hugging Face Daily Paper about UI Agents"'
+        cols="30"
+        rows="3"
+      ></textarea>
+      <button id="run-task" class="primary" disabled>Run Task</button>
+    </div>
+
+    <div class="logs-section">
+      <h3>Activity Log</h3>
+      <div id="logs" class="logs-container"></div>
+    </div>
+
+    <div class="instructions">
+      <h3>Setup Instructions</h3>
+      <ol>
+        <li>Start the Python server: <code>python client/server.py</code></li>
+        <li>Run a task: <code>python client/agent.py "your task here"</code></li>
+        <li>Or use the test interface above</li>
+      </ol>
+    </div>
+
+    <script src="../dist/sidepanel.bundle.js" type="module"></script>
+  </body>
+</html>
